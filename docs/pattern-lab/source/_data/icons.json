@@ -1,0 +1,7 @@
+{
+  "active-flag-src": "../../images/flags/usa.png",
+  "active-flag-alt": "USA Flag",
+
+  "inactive-flag-src": "../../images/flags/spain.png",
+  "inactive-flag-alt": "Spain Flag"
+}

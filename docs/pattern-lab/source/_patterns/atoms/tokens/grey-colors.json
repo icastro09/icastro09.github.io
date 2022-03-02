@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "colorHex": "#171717",
+      "colorName": "Black",
+      "variable": "$color-black"
+    },
+    {
+      "colorHex": "#575757",
+      "colorName": "Grey 0",
+      "variable": "$color-grey_0"
+    },
+    {
+      "colorHex": "#7d7d7d",
+      "colorName": "Grey 1",
+      "variable": "$color-grey_1"
+    },
+    {
+      "colorHex": "#b5b5b5",
+      "colorName": "Grey 2",
+      "variable": "$color-grey_2"
+    },
+    {
+      "colorHex": "#dcdcdc",
+      "colorName": "Grey 3",
+      "variable": "$color-grey_3"
+    },
+    {
+      "colorHex": "#ececec",
+      "colorName": "Grey 4",
+      "variable": "$color-grey_4"
+    },
+    {
+      "colorHex": "#f3f3f3",
+      "colorName": "Grey 5",
+      "variable": "$color-grey_5"
+    }
+  ]
+}
