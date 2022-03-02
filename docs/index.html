@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <script src="js/script.js"></script>
   </head>
   <body>
     <div class="header">
@@ -48,6 +49,268 @@
           />
         </div>
       </nav>
+    </div>
+    <div class="content">
+      <div class="header-sinopsis">
+        <div class="header-image"></div>
+        <div class="sinopsis">
+          <p class="sinopsis-title">Sinopsis</p>
+          <p class="sinopsis-text">
+            Dawn Island is an island located in the East Blue and where the Goa
+            Kingdom is situated.
+            <br /><br />
+            It is the home island of Monkey D. Luffy and the starting point of
+            his journey into piracy, as well as the home island of his father,
+            Monkey D. Dragon.
+            <span id="dots">...</span>
+            <span id="more">
+              <br /><br />
+              This is also the adopted home of Portgas D. Ace after the death of
+              his mother and the home of Sabo and his family.
+              <br /><br />
+              Reverse Mountain is an extremely tall mountain at one of the
+              points where the four Blues meet and is one of the two known
+              entrances to the Grand Line.
+              <br /><br />
+              It is located in the Red Line and is the geographical antipode of
+              Mary Geoise.
+            </span>
+          </p>
+          <button class="button" onclick="readFunction()" id="readBtn">
+            <div class="read-button">
+              <span class="material-icons expand">expand_more</span>
+              <p class="read-button__text">Read All</p>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="search-box">
+        <span class="material-icons">search</span>
+        <input
+          type="text"
+          class="search-box__input"
+          placeholder="Search Characters, Islands or Objects"
+        />
+      </div>
+      <div class="sections">
+        <div class="characters-box">
+          <div class="box-header">
+            <h1 class="section-title">Characters</h1>
+            <p class="see-all">See all</p>
+          </div>
+          <div class="characters">
+            <div class="character__box">
+              <div class="character__box--name">
+                <p>Monkey D. Luffy</p>
+              </div>
+              <div class="character__image--container">
+                <img
+                  class="character-image"
+                  src="images/characters/monkeydluffy.svg"
+                  alt="Monkey D. Luffy"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div class="character__box">
+              <div class="character__box--name">
+                <p>Portgas D. Ace</p>
+              </div>
+              <div class="character__image--container">
+                <img
+                  class="character-image"
+                  src="images/characters/ace.svg"
+                  alt="Portgas D. Ace"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div class="character__box">
+              <div class="character__box--name">
+                <p>Roronoa Zoro</p>
+              </div>
+              <div class="character__image--container">
+                <img
+                  class="character-image"
+                  src="images/characters/zoro.svg"
+                  alt="Roronoa Zoro"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div class="character__box">
+              <div class="character__box--name">
+                <p>Nico Robin</p>
+              </div>
+              <div class="character__image--container">
+                <img
+                  class="character-image"
+                  src="images/characters/nico.svg"
+                  alt="Nico Robin"
+                  width="100%"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="islands-box">
+          <div class="box-header">
+            <h1 class="section-title">Islands</h1>
+            <p class="see-all">See all</p>
+          </div>
+          <div class="islands">
+            <div class="island__box">
+              <div class="island__box--description">
+                <p class="island__box--description-name">Dawn Island</p>
+                <p class="island__box--description-location">
+                  <span class="material-icons location">location_on</span>
+                  East Blue
+                </p>
+              </div>
+              <div class="island__image--container">
+                <img
+                  class="island-image"
+                  src="images/places/dawn.svg"
+                  alt="Dawn"
+                  width="100%"
+                />
+              </div>
+            </div>
+
+            <div class="island__box">
+              <div class="island__box--description">
+                <p class="island__box--description-name">Reverse Mountain</p>
+                <p class="island__box--description-location">
+                  <span class="material-icons location">location_on</span>
+                  Red Line
+                </p>
+              </div>
+              <div class="island__image--container">
+                <img
+                  class="island-image"
+                  src="images/places/reverse.svg"
+                  alt="Dawn"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div class="island__box">
+              <div class="island__box--description">
+                <p class="island__box--description-name">Reverse Mountain</p>
+                <p class="island__box--description-location">
+                  <span class="material-icons location">location_on</span>
+                  Red Line
+                </p>
+              </div>
+              <div class="island__image--container">
+                <img
+                  class="island-image"
+                  src="images/places/reverse.svg"
+                  alt="Dawn"
+                  width="100%"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mist-objects-box">
+          <div class="box-header">
+            <h1 class="section-title">Mist Objects</h1>
+            <p class="see-all">See all</p>
+          </div>
+          <div class="mist-objects">
+            <div class="mist-object__box">
+              <div class="mist-object__image--container">
+                <img
+                  class="mist-object-image"
+                  src="images/places/object.svg"
+                  alt="Dawn"
+                  width="100%"
+                />
+              </div>
+              <div class="mist__text--container">
+                <p class="mist__text--container-title">Gomu Gomu No Mi</p>
+                <p class="mist__text--container-content">
+                  Is a Paramecia-type Devil Fruit that gives the user's body the
+                  properties of rubber, making the user a Rubber Human. It was
+                  then accidentally eaten by the series protagonist, Monkey D.
+                  Luffy.
+                </p>
+              </div>
+            </div>
+            <div class="mist-object__box">
+              <div class="mist-object__image--container">
+                <img
+                  class="mist-object-image"
+                  src="images/places/object.svg"
+                  alt="Dawn"
+                  width="100%"
+                />
+              </div>
+              <div class="mist__text--container">
+                <p class="mist__text--container-title">Gomu Gomu No Mi</p>
+                <p class="mist__text--container-content">
+                  Is a Paramecia-type Devil Fruit that gives the user's body the
+                  properties of rubber, making the user a Rubber Human. It was
+                  then accidentally eaten by the series protagonist, Monkey D.
+                  Luffy.
+                </p>
+              </div>
+            </div>
+            <div class="mist-object__box">
+              <div class="mist-object__image--container">
+                <img
+                  class="mist-object-image"
+                  src="images/places/object.svg"
+                  alt="Dawn"
+                  width="100%"
+                />
+              </div>
+              <div class="mist__text--container">
+                <p class="mist__text--container-title">Gomu Gomu No Mi</p>
+                <p class="mist__text--container-content">
+                  Is a Paramecia-type Devil Fruit that gives the user's body the
+                  properties of rubber, making the user a Rubber Human. It was
+                  then accidentally eaten by the series protagonist, Monkey D.
+                  Luffy.
+                </p>
+              </div>
+            </div>
+            <div class="mist-object__box">
+              <div class="mist-object__image--container">
+                <img
+                  class="mist-object-image"
+                  src="images/places/object.svg"
+                  alt="Dawn"
+                  width="100%"
+                />
+              </div>
+              <div class="mist__text--container">
+                <p class="mist__text--container-title">Gomu Gomu No Mi</p>
+                <p class="mist__text--container-content">
+                  Is a Paramecia-type Devil Fruit that gives the user's body the
+                  properties of rubber, making the user a Rubber Human. It was
+                  then accidentally eaten by the series protagonist, Monkey D.
+                  Luffy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-box">
+        <img
+          src="images/logos/placeholder.png"
+          class="footer__logo"
+          alt="Skull Logo"
+        />
+        <p class="footer-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+          asperiores sint iusto aperiam, ut non.
+        </p>
+      </div>
     </div>
   </body>
 </html>
