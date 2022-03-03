@@ -1,0 +1,43 @@
+@import "../abstract/_mixins.scss";
+@import "../abstract/_variables.scss";
+
+.footer-box {
+  height: 271px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-primary-dark_1;
+  @include mobile {
+    flex-direction: column;
+  }
+  @include tablet {
+    flex-direction: column;
+  }
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.footer__logo {
+  margin-right: 38px;
+  margin-left: 38px;
+}
+
+.footer-text {
+  width: 286px;
+  font-family: "Roboto", sans-serif;  
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  background-color: $color-primary-dark_1;
+  color: $color-grey_5;
+  @include mobile {
+    text-align: center;
+  }
+  @include tablet {
+    text-align: center;
+  }
+  @include desktop {
+    text-align: left;
+  }
+}

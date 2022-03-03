@@ -1,0 +1,91 @@
+@import "../abstract/_mixins.scss";
+@import "../abstract/_variables.scss";
+
+.character__image--container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  border-radius: 20.53px;
+  @include mobile {
+    height: 231px;
+    width: 181.94px;
+  } 
+  @include tablet {
+    height: 184.1px;
+    width: 145px;
+  }
+  @include desktop {
+    height: 279px;
+    width: 219.74px;
+  }
+}
+
+.character__box {
+  position: relative;
+
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  background: $black-gradient;
+  border-radius: 20.53px;
+
+  height: 231px;
+  width: 181.94px;
+  @include mobile {
+    height: 231px;
+    width: 181.94px;
+    flex-shrink: 0;
+  }
+  @include tablet {
+    height: 184.1px;
+    width: 145px;
+  }
+  @include desktop {
+    height: 279px;
+    width: 219.74px;
+  }
+
+}
+
+.character__box--name {
+  color: white;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  @include mobile {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  @include desktop {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.characters {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  @include mobile {
+    flex-wrap: nowrap;
+    justify-items: left;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap:10px;
+  }
+  @include tablet {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @include desktop {
+    justify-content: space-around;
+  }
+}

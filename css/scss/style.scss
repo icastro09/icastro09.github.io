@@ -1,0 +1,13 @@
+@import "_mixins.scss";
+
+.section-title {
+  @include mobile {
+    font-size: 18px;
+  }
+  @include tablet {
+    font-size: 18px;
+  }
+  @include desktop {
+      font-size: 28px;
+  }
+}

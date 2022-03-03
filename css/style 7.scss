@@ -1,0 +1,132 @@
+@import "scss/_mixins.scss";
+@import "scss/_variables.scss";
+
+.logo {
+  height: 40px;
+  width: 112.1px;
+  @include mobile {
+    height: 40px;
+    width: 112.1px;
+  }
+  @include tablet {
+    height: 40px;
+    width: 112.1px;
+  }
+  @include desktop {
+    height: 58px;
+    width: 163px;
+  }
+}
+
+.footer__logo {
+  margin-right: 38px;
+  margin-left: 38px;
+}
+
+.material-icons {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+.expand {
+  color: $color-primary-dark-1;
+}
+
+.search-input {
+  width: 100%;
+  height: 53px;
+}
+
+.search-input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  padding-left: 10px;
+}
+
+.colors__display {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: grid;
+  grid-gap: var(--pl-grid-gap);
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.colors__display li {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  padding: 0.3em;
+  margin: 0 0.5em 0.5em 0;
+  min-width: 5em;
+  max-width: 14em;
+  border: 1px solid var(--pl-border-color);
+  border-radius: 8px;
+}
+
+.color__sample {
+  display: block;
+  height: 4em;
+  margin-bottom: 0.3em;
+  border-radius: 5px;
+}
+
+.color__label {
+  font-size: 90%;
+  line-height: 1;
+}
+
+.flag {
+  padding-top: 2px;
+  padding-right: 25px;
+  padding-bottom: 2px;
+  padding-left: 25px;
+}
+
+.active-flag {
+  background-color: $color-grey_4;
+}
+
+.section-title {
+  font-size: 18px;
+  @include mobile {
+    font-size: 18px;
+  }
+  @include tablet {
+    font-size: 18px;
+  }
+  @include desktop {
+    font-size: 28px;
+  }
+}
+
+.footer-text {
+  width: 286px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: $color-black;
+  @include mobile {
+    text-align: center;
+  }
+  @include tablet {
+    text-align: center;
+  }
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.menu-item_active {
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: $color-primary-dark-1 !important;
+}

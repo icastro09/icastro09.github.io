@@ -1,0 +1,39 @@
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+<header class="header">
+  <nav class="navbar">
+    <ul class="header__menu">
+      <img src="{{logo-src}}" class="header__menu--logo" alt="{{logo-alt}}" />
+      <li class="nav-item">
+        <p class="header__menu--item active">Home</p>
+      </li>
+      <li class="nav-item">
+        <p class="header__menu--item inactive">Characters</p>
+      </li>
+      <li class="nav-item">
+        <p class="header__menu--item inactive">Islands</p>
+      </li>
+      <li class="nav-item">
+        <p class="header__menu--item inactive">Mist Objects</p>
+      </li>
+      <div class="header__menu-language">
+        <img
+          class="header__menu-language--flag active-flag"
+          src="{{active-flag-src}}"
+          alt="{{flag-alt}}"
+        />
+        <img
+          class="header__menu-language--flag"
+          src="{{inactive-flag-src}}"
+          alt="{{inactive-flag-alt}}"
+        />
+      </div>
+    </ul>
+    <div class="header__hamburger">
+      <span class="material-icons header__hamburger--icon">menu</span>
+      <img src="{{logo-src}}" class="header__menu--logo" alt="{{logo-alt}}" />
+    </div>
+  </nav>
+</header>

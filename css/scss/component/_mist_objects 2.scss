@@ -1,0 +1,20 @@
+@import "../abstract/_mixins.scss";
+@import "../abstract/_variables.scss";
+
+
+.mist-object-image {
+  height: 132px;
+  width: 174.49px;
+  @include mobile {
+    height: 132px;
+    width: 174.49px;
+  }
+  @include tablet {
+    height: 175px;
+    width: 181px;
+  }
+  @include mobile {
+    height: 254.29px;
+    width: 263.22px;
+  }
+}

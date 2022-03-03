@@ -1,0 +1,91 @@
+@import "../abstract/_mixins.scss";
+@import "../abstract/_variables.scss";
+
+.island__image--container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  @include mobile {
+    height: 193px;
+    width: 194px;
+  }
+  @include tablet {
+    height: 199px;
+    width: 200.03px;
+  }
+  @include desktop {
+    height: 298.5px;
+    width: 300.05px;
+  }
+}
+
+.island__box {
+  height: 193px;
+  width: 194px;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  @include mobile {
+    height: 193px;
+    width: 194px;
+    flex-shrink: 0;
+  }
+  @include tablet {
+    height: 199px;
+    width: 200.03px;
+  }
+  @include desktop {
+    height: 298.5px;
+    width: 300.05px;
+  }
+}
+
+.island__box--description {
+  width: 90%;
+  padding-left: 10px;
+  color: $color_grey_5;
+  margin: 12px;
+  font-family: "Roboto Slab", serif;
+  background: $background-color;
+  backdrop-filter: $backgroud-blur;
+  border-radius: 9.27979px;
+}
+
+.island__box--description-name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+.island__box--description-location {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  align-items: center;
+}
+
+.islands {
+  display: flex;
+  width: 75%;
+  margin: auto;
+  @include mobile {
+    flex-wrap: nowrap;
+    justify-items: left;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 10px;
+  }
+  @include tablet {
+    flex-wrap: nowrap;
+    justify-items: left;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: space-between;
+  }
+  @include desktop {
+    justify-content: space-between;
+  }
+}

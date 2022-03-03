@@ -1,0 +1,76 @@
+@import "../abstract/_mixins.scss";
+@import "../abstract/_variables.scss";
+
+.mist-object-image {
+  height: 132px;
+  width: 174.49px;
+  @include mobile {
+    height: 132px;
+    width: 174.49px;
+  }
+  @include tablet {
+    height: 175px;
+    width: 181px;
+  }
+  @include mobile {
+    height: 254.29px;
+    width: 263.22px;
+  }
+}
+
+.mist__text--container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: rgba(0, 96, 150, 0.59);
+  backdrop-filter: blur(4px);
+  border-radius: 0px 6px 6px 0px;
+  width: 184px;
+  height: 135px;
+  color: $color-grey_5;
+
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  margin: 4px 0px;
+  align-self: stretch;
+  @include mobile {
+    width: 200px;
+    height: 175px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    margin: 4px 0px;
+    padding: 8px;
+  }
+  @include tablet {
+    width: 184px;
+    height: 135px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    margin: 5.94839px 0px;
+    padding: 8px;
+  }
+  @include desktop {
+    width: 297.42px;
+    height: 254.29px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    padding: 11px;
+  }
+}
+
+.mist__text--container-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.1px;
+}
+
+.mist__text--container-content {
+  margin: 5.94839px 0px;
+}

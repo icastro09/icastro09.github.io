@@ -1,0 +1,86 @@
+@import "../abstract/_mixins.scss";
+@import "../abstract/_variables.scss";
+
+.character-image-display {
+  height: 231px;
+  width: 181.94px;
+  @include mobile {
+    height: 231px;
+    width: 181.94px;
+  }
+  @include tablet {
+    height: 184.1px;
+    width: 145px;
+  }
+  @include mobile {
+    height: 279px;
+    width: 219.74px;
+  }
+}
+
+.character__box {
+  position: relative;
+
+  margin: 10px;
+
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  background: $black-gradient;
+  border-radius: 20.53px;
+
+  height: 231px;
+  width: 181.94px;
+  @include mobile {
+    height: 231px;
+    width: 181.94px;
+  }
+  @include tablet {
+    height: 184.1px;
+    width: 145px;
+  }
+  @include mobile {
+    height: 279px;
+    width: 219.74px;
+  }
+}
+
+.character__box--name {
+  color: white;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.character-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  height: 231px;
+  width: 181.94px;
+  @include mobile {
+    height: 231px;
+    width: 181.94px;
+  }
+  @include tablet {
+    height: 184.1px;
+    width: 145px;
+  }
+  @include mobile {
+    height: 279px;
+    width: 219.74px;
+  }
+}
+
+.characters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+}

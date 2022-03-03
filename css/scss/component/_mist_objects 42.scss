@@ -1,0 +1,86 @@
+@import "../abstract/_mixins.scss";
+@import "../abstract/_variables.scss";
+
+.mist-object__image--container {
+  width: 174.49px;
+  height: 175px;
+  @include mobile {
+    width: 174.49px;
+    height: 175px;
+  }
+  @include tablet {
+    width: 181px;
+    height: 175px;
+  }
+  @include desktop {
+    width: 263.22px;
+    height: 254.29px;
+  }
+}
+
+.mist-object__box {
+  display: flex;
+  flex-direction: row;
+  height: 175px;
+  @include mobile {
+    height: 175px;
+  }
+  @include tablet {
+    height: 175px;
+  }
+  @include desktop {
+    height: 254.29px;
+  }
+}
+
+.mist__text--container {
+  position: relative;
+  width: 240px;
+  height: 175px;
+  left: -10%;
+  top: 0;
+  background: rgba(0, 96, 150, 0.59);
+  backdrop-filter: blur(4px);
+  border-radius: 0px 6px 6px 0px;
+  color: $color-grey_5;
+
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  @include mobile {
+    width: 240px;
+    height: 175px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    padding: 8px;
+    overflow-x: auto;
+  }
+  @include tablet {
+    width: 200px;
+    height: 175px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.15px;
+    padding: 8px;
+  }
+  @include desktop {
+    width: 297.42px;
+    height: 254.29px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    padding: 11px;
+  }
+}
+
+.mist__text--container-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+.mist__text--container-content {
+  margin: 5.94839px 0px;
+}

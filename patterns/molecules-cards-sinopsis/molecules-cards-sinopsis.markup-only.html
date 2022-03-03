@@ -1,0 +1,81 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="sinopsis">
+	<div class="sinopsis__image"></div>	<img class="sinopsis__hidden-logo" id="hiddenLogo" src="../../../images/logos/onepiecelogo.png" alt="">
+	<div class="sinopsis__content">
+		<p class="sinopsis__content--title">Sinopsis</p>
+		<p class="sinopsis__content--text">
+			Dawn Island is an island located in the East Blue and where the Goa Kingdom is situated.
+			<br><br>
+			It is the home island of Monkey D. Luffy and the starting point of his journey into piracy, as well as the
+			home
+			island of his father, Monkey D. Dragon.
+			<span id="dots">...</span>
+			<span id="more">
+				<br><br>
+				This is also the adopted home of Portgas D. Ace after the death of his mother and the home of Sabo and
+				his
+				family.
+				<br><br>
+				Reverse Mountain is an extremely tall mountain at one of the points where the four Blues meet and is one
+				of
+				the
+				two known entrances to the Grand Line.
+				<br><br>
+				It is located in the Red Line and is the geographical antipode of Mary Geoise.
+			</span>
+		</p>
+		<button class="sinopsis__content--button" onclick="readFunction()" id="readBtn">
+			<div class="sinopsis__content--button-read">
+				<span class="material-icons expand">expand_more</span>
+				<p class="sinopsis__content--button-read--text">Read All</p>
+			</div>
+		</button>
+	</div>
+</div>
+<script>
+	function readFunction() {
+		var dots = document.getElementById("dots");
+		var moreText = document.getElementById("more");
+		var btnText = document.getElementById("readBtn");
+		if (dots.style.display === "none") {
+			dots.style.display = "inline";
+			btnText.innerHTML = '<div class="sinopsis__content--button-read"><span class="material-icons expand">expand_less</span><p class="sinopsis__content--button-read--text">Read All</p></div>';		
+			moreText.style.display = "none";
+		} else {
+			dots.style.display = "none";
+			btnText.innerHTML = '<div class="sinopsis__content--button-read"><span class="material-icons expand">expand_more</span><p class="sinopsis__content--button-read--text">Read Less</p></div>';
+			moreText.style.display = "inline";
+		}
+		displayHiddenLogo();
+	}
+	
+	function displayHiddenLogo() {
+		var hiddenLogo = document.getElementById("hiddenLogo");
+		var w = document.documentElement.clientWidth;
+    if (hiddenLogo.style.display === "inline") {
+			hiddenLogo.style.display = "none";
+    } else if (w<"500") {
+			hiddenLogo.style.display = "inline";
+		} else {
+			hiddenLogo.style.display = "none";
+		}
+	}
+
+	function displayWindowSize(){
+		var w = document.documentElement.clientWidth;
+		var dots = document.getElementById("dots");
+		var moreText = document.getElementById("more");
+		if(w >= "1200") {
+			moreText.style.display = "inline";
+			dots.style.display = "none";
+		} else if (w < "1200") {
+			moreText.style.display = "none";
+			dots.style.display = "inline";
+		}
+	}
+	window.addEventListener("resize", displayWindowSize);
+	displayWindowSize();
+
+	
+
+</script>

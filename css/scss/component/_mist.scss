@@ -1,0 +1,84 @@
+@import "../abstract/_mixins.scss";
+
+.box {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.mist-box {
+  display: flex;
+  margin: 20px;
+  margin-bottom: 30px;
+
+  @include mobile {
+    height: 175px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  @include tablet {
+    height: 175px;
+  }
+  @include desktop {
+    height: 254.29px;
+  }
+}
+
+.mist-image-container {
+  width: 174.49px;
+  height: 175px;
+  @include mobile {
+    width: 174.49px;
+    height: 175px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    flex-shrink: 0;
+  }
+  @include tablet {
+    width: 181px;
+    height: 175px;
+  }
+  @include desktop {
+    width: 263.22px;
+    height: 254.29px;
+  }
+}
+
+.mist-text-container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 96, 150, 0.59);
+  backdrop-filter: blur(4px);
+  color: $color-grey_5;
+
+  @include mobile {
+    margin-left: -50px;
+    width: 240px;
+    height: 168px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    padding: 8px;
+    flex-shrink: 0;
+  }
+  @include tablet {
+    margin-left: -80px;
+    width: 200px;
+    height: 170px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.15px;
+    padding: 8px;
+  }
+  @include desktop {
+    margin-left: -100px;
+    width: 297.42px;
+    height: 249.29px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    padding: 11px;
+  }
+}

@@ -1,0 +1,68 @@
+@import "../abstract/_mixins.scss";
+@import "../abstract/_variables.scss";
+
+.island__image--container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  @include mobile {
+    height: 193px;
+    width: 194px;
+  }
+  @include tablet {
+    height: 199px;
+    width: 200.03px;
+  }
+  @include desktop {
+    height: 298.5px;
+    width: 300.05px;
+  }
+}
+
+.island__box {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  height: 193px;
+  width: 194px;
+  @include mobile {
+    height: 193px;
+    width: 194px;
+  }
+  @include tablet {
+    height: 199px;
+    width: 200.03px;
+  }
+  @include mobile {
+    height: 298.5px;
+    width: 300.05px;
+  }
+}
+
+.island__box--description {
+  color: $color_grey_5;
+  width: 90%;
+  padding-left: 10px;
+  margin: 12px;
+  font-family: "Roboto Slab", serif;
+  background: $background-color;
+  backdrop-filter: $backgroud-blur;
+  border-radius: 9.27979px;
+}
+
+.island__box--description-name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+.island__box--description-location {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  align-items: center;
+}

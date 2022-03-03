@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="../../css/style.css?1646325726399" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1646325726399" media="all" />
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    
+    <!-- End Pattern Lab -->
+
+  </head>
+  <body class="">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="sinopsis">
+	<div class="sinopsis__image"></div>	<img class="sinopsis__hidden-logo" id="hiddenLogo" src="../../../images/logos/onepiecelogo.png" alt="">
+	<div class="sinopsis__content">
+		<p class="sinopsis__content--title">Sinopsis</p>
+		<p class="sinopsis__content--text">
+			Dawn Island is an island located in the East Blue and where the Goa Kingdom is situated.
+			<br><br>
+			It is the home island of Monkey D. Luffy and the starting point of his journey into piracy, as well as the
+			home
+			island of his father, Monkey D. Dragon.
+			<span id="dots">...</span>
+			<span id="more">
+				<br><br>
+				This is also the adopted home of Portgas D. Ace after the death of his mother and the home of Sabo and
+				his
+				family.
+				<br><br>
+				Reverse Mountain is an extremely tall mountain at one of the points where the four Blues meet and is one
+				of
+				the
+				two known entrances to the Grand Line.
+				<br><br>
+				It is located in the Red Line and is the geographical antipode of Mary Geoise.
+			</span>
+		</p>
+		<button class="sinopsis__content--button" onclick="readFunction()" id="readBtn">
+			<div class="sinopsis__content--button-read">
+				<span class="material-icons expand">expand_more</span>
+				<p class="sinopsis__content--button-read--text">Read All</p>
+			</div>
+		</button>
+	</div>
+</div>
+<script>
+	function readFunction() {
+		var dots = document.getElementById("dots");
+		var moreText = document.getElementById("more");
+		var btnText = document.getElementById("readBtn");
+		if (dots.style.display === "none") {
+			dots.style.display = "inline";
+			btnText.innerHTML = '<div class="sinopsis__content--button-read"><span class="material-icons expand">expand_less</span><p class="sinopsis__content--button-read--text">Read All</p></div>';		
+			moreText.style.display = "none";
+		} else {
+			dots.style.display = "none";
+			btnText.innerHTML = '<div class="sinopsis__content--button-read"><span class="material-icons expand">expand_more</span><p class="sinopsis__content--button-read--text">Read Less</p></div>';
+			moreText.style.display = "inline";
+		}
+		displayHiddenLogo();
+	}
+	
+	function displayHiddenLogo() {
+		var hiddenLogo = document.getElementById("hiddenLogo");
+		var w = document.documentElement.clientWidth;
+    if (hiddenLogo.style.display === "inline") {
+			hiddenLogo.style.display = "none";
+    } else if (w<"500") {
+			hiddenLogo.style.display = "inline";
+		} else {
+			hiddenLogo.style.display = "none";
+		}
+	}
+
+	function displayWindowSize(){
+		var w = document.documentElement.clientWidth;
+		var dots = document.getElementById("dots");
+		var moreText = document.getElementById("more");
+		if(w >= "1200") {
+			moreText.style.display = "inline";
+			dots.style.display = "none";
+		} else if (w < "1200") {
+			moreText.style.display = "none";
+			dots.style.display = "inline";
+		}
+	}
+	window.addEventListener("resize", displayWindowSize);
+	displayWindowSize();
+
+	
+
+</script>
+<!--DO NOT REMOVE-->
+<script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"atoms-sinopsis-image","lineagePath":"../../patterns/atoms-images-sinopsis-image/atoms-images-sinopsis-image.rendered.html"}],"lineage":[{"lineagePattern":"atoms-sinopsis-image","lineagePath":"../../patterns/atoms-images-sinopsis-image/atoms-images-sinopsis-image.rendered.html"}],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-home-page","lineagePath":"../../patterns/pages-home-page/pages-home-page.rendered.html"}],"lineageR":[{"lineagePattern":"pages-home-page","lineagePath":"../../patterns/pages-home-page/pages-home-page.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"molecules","patternSubgroup":"cards"},"patternExtension":"hbs","patternName":"Sinopsis","patternPartial":"molecules-sinopsis","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+</script>
+
+<script>
+  window.patternData = {"cssEnabled":false,"patternLineageExists":true,"patternLineages":[{"lineagePattern":"atoms-sinopsis-image","lineagePath":"../../patterns/atoms-images-sinopsis-image/atoms-images-sinopsis-image.rendered.html"}],"lineage":[{"lineagePattern":"atoms-sinopsis-image","lineagePath":"../../patterns/atoms-images-sinopsis-image/atoms-images-sinopsis-image.rendered.html"}],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"pages-home-page","lineagePath":"../../patterns/pages-home-page/pages-home-page.rendered.html"}],"lineageR":[{"lineagePattern":"pages-home-page","lineagePath":"../../patterns/pages-home-page/pages-home-page.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"molecules","patternSubgroup":"cards"},"patternExtension":"hbs","patternName":"Sinopsis","patternPartial":"molecules-sinopsis","patternState":"","patternEngineName":"handlebars","extraOutput":{}};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1646325726399">
+  (function() {
+    if (self != top) {
+      var cb = '1646325726399';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1646325726399" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+
+</body>
+</html>

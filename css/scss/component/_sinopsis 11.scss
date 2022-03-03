@@ -1,0 +1,166 @@
+@import "../abstract/_mixins.scss";
+@import "../abstract/_variables.scss";
+
+.sinopsis {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 48px;
+  }
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 32px;
+  }
+  @include desktop {
+    width: 75%;
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 0px 8px $color-primary_light_1;
+    border-radius: 6px;
+  }
+
+  &__image {
+    width: 100vw;
+    height: 460px;
+
+    @include mobile {
+      height: 260px;
+      background: $white-gradient,
+        url(../../../images/characters/characters.svg);
+      background-repeat: no-repeat;
+      background-size: 100vw;
+    }
+    @include tablet {
+      background: url(../../../images/characters/characters.svg);
+      background-repeat: no-repeat;
+      background-size: 100vw;
+    }
+    @include desktop {
+      height: 628px;
+      width: 640px;
+      background: url(../../../images/characters/characters-desktop.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__content {
+    margin-top: 20px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0px 0px 8px $color-primary_light_1;
+    border-radius: 6px;
+    @include mobile {
+      margin-top: 20px;
+      width: 75%;
+      margin: auto;
+    }
+    @include tablet {
+      margin: auto;
+      margin-top: -30px;
+      width: 75%;
+    }
+    @include desktop {
+      margin: 0;
+      margin-top: 20px;
+      width: 30%;
+      box-shadow: none;
+    }
+
+    &--title {
+      font-family: "Roboto Slab", serif;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 28px;
+      color: $color-black;
+    }
+
+    &--text {
+      margin: 16px 0px;
+      align-self: stretch;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.25px;
+      color: $color-black;
+    }
+  }
+}
+
+.expand {
+  color: $color-primary-dark_1;
+}
+
+.location {
+  height: 11.6px;
+  width: 14px;
+}
+
+.location-display {
+  padding: 30px;
+  background: $background-color;
+  backdrop-filter: $backgroud-blur;
+}
+
+.see-all {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: $color-primary-dark_1;
+}
+
+#more {
+  display: inline;
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: inline;
+  }
+}
+
+.sinopsis__content--button {
+  width: 100%;
+  height: 53px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  border: 0px;
+  background-color: #fff;
+  @include desktop {
+    display: none;
+  }
+
+  &-read {
+    width: 100%;
+    height: 53px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    border-top: 0.56px solid $color-primary-dark_1;
+    @include desktop {
+      display: none;
+    }
+
+    &--text {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      color: $color-primary-dark_1;
+    }
+  }
+}

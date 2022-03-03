@@ -1,0 +1,41 @@
+@import "../abstract/_mixins.scss";
+@import "../abstract/_variables.scss";
+
+.nav-menu {
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+.hamburger-menu {
+  @include mobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+  }
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.hamburger {
+    left: 0;
+}

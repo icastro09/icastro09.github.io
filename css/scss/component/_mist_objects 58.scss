@@ -1,0 +1,103 @@
+@import "../abstract/_mixins.scss";
+@import "../abstract/_variables.scss";
+
+.mist-object__image--container {
+  display: flex;
+  width: 174.49px;
+  height: 175px;
+  @include mobile {
+    width: 174.49px;
+    height: 175px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    flex-shrink: 0;
+  }
+  @include tablet {
+    width: 181px;
+    height: 175px;
+  }
+  @include desktop {
+    width: 263.22px;
+    height: 254.29px;
+  }
+}
+
+.mist-object__box {
+  display: flex;
+  flex-direction: row;
+  height: 175px;
+  @include mobile {
+    height: 175px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  @include tablet {
+    height: 175px;
+  }
+  @include desktop {
+    height: 254.29px;
+  }
+}
+
+.mist__text--container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 240px;
+  height: 175px;
+  margin-left: -10%;
+  top: 0;
+  background: rgba(0, 96, 150, 0.59);
+  backdrop-filter: blur(4px);
+  border-radius: 0px 6px 6px 0px;
+  color: $color-grey_5;
+
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  @include mobile {
+    width: 240px;
+    height: 168px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    padding: 8px;
+    flex-shrink: 0;
+  }
+  @include tablet {
+    width: 200px;
+    height: 170px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.15px;
+    padding: 8px;
+  }
+  @include desktop {
+    width: 297.42px;
+    height: 249.29px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    padding: 11px;
+  }
+}
+
+.mist__text--container-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+.mist__text--container-content {
+  margin: 5.94839px 0px;
+}
+
+.mist-objects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 95%;
+  margin-left: 5%;
+  justify-content: space-around;
+}
